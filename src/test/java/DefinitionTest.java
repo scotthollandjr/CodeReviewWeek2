@@ -15,4 +15,12 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("Noun", "A mexican dish");
     assertTrue(Definition.all().contains(testDefinition));
   }
+
+  @Test
+  public void all_arrayContainsMultiple_Array() {
+    Definition testOne = new Definition("Noun", "A mexican dish");
+    Definition testTwo = new Definition("Verb", "To eat nachos");
+    assertTrue(Definition.all().contains(testOne));
+    assertTrue(Definition.all().contains(testTwo));
+  }
 }
