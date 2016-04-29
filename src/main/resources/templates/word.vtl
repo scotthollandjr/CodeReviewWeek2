@@ -1,1 +1,23 @@
-$word.getWord()
+<h1>$word.getWord()</h1>
+
+<p>Definitions:</p>
+
+<!-- #if ($definitions) -->
+  #foreach ($definition in $definitions)
+    <h3>$word.getDefinitions()</h3>
+  #end
+<!-- #else
+  <h2>No definitions yet!</h2>
+#end -->
+
+<p>Add your definition here:</p>
+<form action="/success" method="post">
+  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
+  <div class="form-group">
+    <label for="definition">Definition</label>
+    <input id="definition" name="definition" type="text">
+  </div>
+  <button type="submit" class="btn btn-success">Add Definition</button>
+</form>
+
+<a href="/">Return Home</a>

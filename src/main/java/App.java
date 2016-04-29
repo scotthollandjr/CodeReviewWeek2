@@ -41,8 +41,26 @@ public class App {
     get("/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Word word = Word.find(Integer.parseInt(request.params(":id")));
+
+
+      model.put("definitions", Word.getDefinitions());
       model.put("word", word);
       model.put("template", "templates/word.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/success", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
+
+      String wordID = request.queryParams("wordId");
+      String definition = request.queryParams("definition");
+      Definition newDefinition = new Definition(definition);
+
+      word.addDefinition(newDefinition);
+
+      model.put("word", word);
+      model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
