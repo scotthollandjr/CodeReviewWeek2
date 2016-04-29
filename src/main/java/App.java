@@ -57,7 +57,7 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/success", (request, response) -> {
+    post("/successdef", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
 
@@ -67,7 +67,7 @@ public class App {
       word.addDefinition(newDefinition);
 
       model.put("word", word);
-      model.put("template", "templates/success.vtl");
+      model.put("template", "templates/successdef.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
