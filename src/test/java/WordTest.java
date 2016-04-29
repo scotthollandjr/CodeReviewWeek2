@@ -10,4 +10,9 @@ public class WordTest {
     assertEquals(true, testWord instanceof Word);
   }
 
+  @Test
+  public void allWords_returnsWord_Array() {
+    Word testWord = new Word("Nachos");
+    assertTrue(Word.allWords().contains(testWord));
+  }
 }
