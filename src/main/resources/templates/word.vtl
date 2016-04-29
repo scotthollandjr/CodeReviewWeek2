@@ -3,8 +3,8 @@
 <p>Definitions:</p>
 
 <!-- #if ($definitions) -->
-  #foreach ($definition in $word.getDefinitions())
-    <h3>$word.getDefinition</h3>
+  #foreach ($definition in $definitions)
+    <h3>$definition.getDefinition()</h3>
   #end
 <!-- #else
   <h2>No definitions yet!</h2>
