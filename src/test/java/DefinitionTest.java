@@ -23,4 +23,10 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(testOne));
     assertTrue(Definition.all().contains(testTwo));
   }
+
+  @Test
+  public void getParts_returnsString_String() {
+    Definition testDefinition = new Definition("Noun", "A mexican dish");
+    assertEquals("Noun", testDefinition.getParts());
+  }
 }

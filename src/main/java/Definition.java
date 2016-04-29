@@ -16,4 +16,8 @@ public class Definition {
   public static ArrayList<Definition> all() {
     return definitions;
   }
+
+  public String getParts() {
+    return mParts;
+  }
 }
