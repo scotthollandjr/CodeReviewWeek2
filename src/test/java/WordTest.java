@@ -52,4 +52,12 @@ public class WordTest {
     Word testWord = new Word("Nachos");
     assertEquals(null, Word.find(24));
   }
+
+  @Test
+  public void getDefinitions_returnsDefinitionsArray_array() {
+    Word testWord = new Word("Nachos");
+    Definition testDefinition = new Definition("Noun", "A mexican dish");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
 }
