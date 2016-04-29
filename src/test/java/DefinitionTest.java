@@ -6,7 +6,13 @@ public class DefinitionTest {
 
   @Test
   public void Definition_instantiatesCorrectly_true() {
-    Definition testDefinition = new Definition("A mexican dish");
+    Definition testDefinition = new Definition("Noun", "A mexican dish");
     assertEquals(true, testDefinition instanceof Definition);
+  }
+
+  @Test
+  public void all_returnsArray_Array() {
+    Definition testDefinition = new Definition("Noun", "A mexican dish");
+    assertTrue(Definition.all().contains(testDefinition));
   }
 }
