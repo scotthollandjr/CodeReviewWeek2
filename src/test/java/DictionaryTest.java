@@ -6,7 +6,7 @@ public class DictionaryTest {
 
   @Test
   public void  Dicitionary_instantiatesCorrectly_true() {
-    Dictionary testDiction = new Dictionary("Nachos");
+    Dictionary testDiction = new Dictionary();
     assertEquals(true, testDiction instanceof Dictionary);
   }
 }
