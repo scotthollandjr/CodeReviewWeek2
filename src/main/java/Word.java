@@ -5,7 +5,7 @@ public class Word {
 
   private String mWord;
   private int mId;
-  private static ArrayList<Definition> mDefinitions;
+  private ArrayList<Definition> mDefinitions;
 
   public Word(String word) {
     mWord = word;
@@ -30,7 +30,7 @@ public class Word {
     dictionary.clear();
   }
 
-  public static ArrayList<Definition> getDefinitions() {
+  public ArrayList<Definition> getDefinitions() {
     return mDefinitions;
   }
 
