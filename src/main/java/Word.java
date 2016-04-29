@@ -33,4 +33,12 @@ public class Word {
   public void addDefinition(Definition definition) {
     mDefinitions.add(definition);
   }
+
+  public static Word find(int id) {
+    try {
+      return dictionary.get(id - 1);
+    } catch (IndexOutOfBoundsException exception) {
+      return null;
+    }
+  }
 }

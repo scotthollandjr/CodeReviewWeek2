@@ -46,4 +46,10 @@ public class WordTest {
     Word testTwo = new Word("Eat");
     assertEquals(2, testTwo.getId());
   }
+
+  @Test
+  public void getId_outOfBounds_null() {
+    Word testWord = new Word("Nachos");
+    assertEquals(null, Word.find(24));
+  }
 }
