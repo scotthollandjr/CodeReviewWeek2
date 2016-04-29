@@ -17,4 +17,20 @@ public class Word {
   public static ArrayList<Word> allWords() {
     return dictionary;
   }
+
+  public String getWord() {
+    return mWord;
+  }
+
+  public int getId() {
+    return mId;
+  }
+
+  public static void clear() {
+    dictionary.clear();
+  }
+
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
+  }
 }
