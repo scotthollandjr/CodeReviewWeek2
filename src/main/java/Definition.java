@@ -3,13 +3,13 @@ import java.util.ArrayList;
 
 public class Definition {
   private String mParts;
-  private String mDefintition;
+  private String mDefinition;
   private static ArrayList<Definition> definitions = new ArrayList<Definition>();
   private int mId;
 
   public Definition(String parts, String definition) {
     mParts = parts;
-    mDefintition = definition;
+    mDefinition = definition;
     definitions.add(this);
   }
 
@@ -19,5 +19,9 @@ public class Definition {
 
   public String getParts() {
     return mParts;
+  }
+
+  public String getDefinition() {
+    return mDefinition;
   }
 }

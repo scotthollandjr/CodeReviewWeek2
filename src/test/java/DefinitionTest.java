@@ -29,4 +29,10 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("Noun", "A mexican dish");
     assertEquals("Noun", testDefinition.getParts());
   }
+
+  @Test
+  public void getDefinition_returnsString_String() {
+    Definition testDefinition = new Definition("Noun", "A mexican dish");
+    assertEquals("A mexican dish", testDefinition.getDefinition());
+  }
 }
