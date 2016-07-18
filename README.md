@@ -1,4 +1,4 @@
-# _Object Oriented Java Independent project_
+# Dictionary project_
 
 ##### _4/29/2016_
 
